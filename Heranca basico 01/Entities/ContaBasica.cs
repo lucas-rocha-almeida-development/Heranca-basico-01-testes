@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Heranca_basico_01.Entities
 {
-    internal class ContaBasica
+    internal abstract class ContaBasica
     {
         public int Number { get; private set; }// numero da conta
         public string Holder { get;private set; }// titular da conta
@@ -28,12 +28,16 @@ namespace Heranca_basico_01.Entities
         //METODOS SAQUE E DEPOSITO
         public void Saque(double quantia) // quantia sera retirada do saldo da conta
         {
-            Balance -= quantia; //saldo da conta - quantia
+            Balance -= quantia + 5.0; //saldo da conta - quantia
         }
 
         public void Deposito (double quantia)//quantia sera aplicada na conta
         {
             Balance += quantia; //saldo da conta + quantia( depositada)
+        }
+        public virtual void Sacar(double quantia)
+        {
+            Balance -= quantia + 5.0;
         }
     }
 }

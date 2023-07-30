@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Heranca_basico_01.Entities
 {
-    internal class ContaPoupanca : ContaBasica
+    internal  class ContaPoupanca : ContaBasica
     {
         public double InterestRate { get; set; }//TAXA DE JUROS
 
@@ -25,6 +25,12 @@ namespace Heranca_basico_01.Entities
         public void UpdateBalance() // atualizar saldo
         {
             Balance += Balance * InterestRate; // saldo * taxa de juros 
+        }
+        public sealed override void Sacar(double quantia)
+        //utilizando o sealed impede que essa operação seja subscrita novamente.
+        {
+            base.Sacar(quantia);
+            Balance-= 2.0;
         }
 
     }

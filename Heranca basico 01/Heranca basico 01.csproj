@@ -46,6 +46,7 @@
     <Compile Include="Entities\ContaBasica.cs" />
     <Compile Include="Entities\ContaEmpresarial.cs" />
     <Compile Include="Entities\ContaPoupanca.cs" />
+    <Compile Include="Entities\ContaPoupancaPlus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
